@@ -1,0 +1,47 @@
+{
+  "name": "fotballdata-elements",
+  "version": "0.0.1",
+  "description": "Custom html elementer for visning av data fra fiks via fotballdata.no's api. Skrevet med es6-syntax, transpilert med Babel.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "gulp": "./node_modules/gulp/bin/gulp.js",
+    "postinstall": "./node_modules/bower/bin/bower install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/askoyfk/fotballdata-elements.git"
+  },
+  "keywords": [
+    "Askøy",
+    "Fotballklubb",
+    "Askøy",
+    "FK",
+    "AFK",
+    "FIKS",
+    "fotballdata",
+    "custom",
+    "elements"
+  ],
+  "author": "Victor Nystad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/askoyfk/fotballdata-elements/issues"
+  },
+  "homepage": "https://github.com/askoyfk/fotballdata-elements#readme",
+  "devDependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "bower": "^1.5.2",
+    "browser-sync": "^2.9.3",
+    "csswring": "^4.0.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-postcss": "^6.0.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "postcss-color-function": "^2.0.0",
+    "postcss-custom-properties": "^5.0.0",
+    "postcss-import": "^7.0.0",
+    "postcss-nested": "^1.0.0",
+    "require-dir": "^0.3.0"
+  }
+}
