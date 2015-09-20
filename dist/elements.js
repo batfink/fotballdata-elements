@@ -1,16 +1,16 @@
 (function (global, factory) {
     if (typeof define === 'function' && define.amd) {
-        define(['exports', '../lib/bondage.js', '../lib/date.js'], factory);
+        define(['exports', '../lib/test.js'], factory);
     } else if (typeof exports !== 'undefined') {
-        factory(exports, require('../lib/bondage.js'), require('../lib/date.js'));
+        factory(exports, require('../lib/test.js'));
     } else {
         var mod = {
             exports: {}
         };
-        factory(mod.exports, global.bondage, global.Date);
+        factory(mod.exports, global.test);
         global.testElement = mod.exports;
     }
-})(this, function (exports, _libBondageJs, _libDateJs) {
+})(this, function (exports, _libTestJs) {
     'use strict';
 
     var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -23,7 +23,7 @@
 
     function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-    var _Date = _interopRequireDefault(_libDateJs);
+    var _test = _interopRequireDefault(_libTestJs);
 
     var _HTMLElement = function _HTMLElement() {};
     _HTMLElement.prototype = HTMLElement.prototype;
@@ -43,7 +43,8 @@
                 this.setAttribute('element-created', '');
                 // console.log('foo');
                 // log('created');
-                var p = (0, _libBondageJs.tag)('p');
+                console.log('test2:', _test['default']);
+                // test();
             }
         }, {
             key: 'attachedCallback',

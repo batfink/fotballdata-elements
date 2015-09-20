@@ -1,3 +1,5 @@
+import test from '../lib/test.js';
+
 var _HTMLElement = function() {};
 _HTMLElement.prototype = HTMLElement.prototype;
 
@@ -7,7 +9,8 @@ class TestElement extends _HTMLElement {
         this.setAttribute('element-created', '');
         // console.log('foo');
         // log('created');
-        var p = tag('p');
+        console.log('test2:', test);
+        // test();
 
     }
 
