@@ -8,11 +8,7 @@ gulp.task('browsersync', function() {
         // open: false,
         // reloadOnRestart: true,
         server: {
-            baseDir: [ 'www' ],
-            routes : {
-                '/bower_components' : './bower_components',
-                '/dist' : './dist',
-            }
+            baseDir: [ 'www', 'bower_components', 'dist' ]
         }
     });
 
