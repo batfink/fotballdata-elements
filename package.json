@@ -37,6 +37,7 @@
     "gulp-babel": "^5.2.1",
     "gulp-concat": "^2.6.0",
     "gulp-postcss": "^6.0.0",
+    "gulp-rollup": "^1.0.1",
     "gulp-sourcemaps": "^1.5.2",
     "postcss-color-function": "^2.0.0",
     "postcss-custom-properties": "^5.0.0",
