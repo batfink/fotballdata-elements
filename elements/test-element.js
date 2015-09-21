@@ -9,8 +9,8 @@ class TestElement extends _HTMLElement {
         this.setAttribute('element-created', '');
         // console.log('foo');
         // log('created');
-        console.log('test2:', test);
-        // test();
+        console.log('test:', test);
+        test();
 
     }
 
