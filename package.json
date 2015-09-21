@@ -5,7 +5,13 @@
   "main": "gulpfile.js",
   "scripts": {
     "gulp": "./node_modules/gulp/bin/gulp.js",
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "./node_modules/bower/bin/bower install",
+    "serve" : "browser-sync start --server www --server dist --server bower_components --files dist/*, www/*",
+    "start": "browser-sync --config bs-config.js start",
+    "watch": "",
+    "build": "mkdir -p dist && rollup elements/test-element.js | babel -m umd --module-id fotballdataElements -o dist/test.js",
+    "build-css": "",
+    "build-js": ""
   },
   "repository": {
     "type": "git",
@@ -30,6 +36,7 @@
   "homepage": "https://github.com/askoyfk/fotballdata-elements#readme",
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",
+    "babel": "^5.8.23",
     "bower": "^1.5.2",
     "browser-sync": "^2.9.3",
     "csswring": "^4.0.0",
@@ -43,6 +50,7 @@
     "postcss-custom-properties": "^5.0.0",
     "postcss-import": "^7.0.0",
     "postcss-nested": "^1.0.0",
-    "require-dir": "^0.3.0"
+    "require-dir": "^0.3.0",
+    "rollup": "^0.16.2"
   }
 }
