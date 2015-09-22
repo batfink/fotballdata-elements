@@ -5,11 +5,14 @@
   "main": "dist/test.js",
   "jsnext:main": "index.js",
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install && npm start",    
-    "start": "npm run build && npm run watch & npm run serve",
-    "watch": "chokidar 'index.js' -c 'npm run build'",
+    "postinstall": "./node_modules/bower/bin/bower install && npm start",
+    "start": "npm run watch:js & npm run watch:css & npm run serve",
+    "preserve": "npm run build:js & npm run build:css",
     "serve": "browser-sync start --server www --server dist --server bower_components --files 'dist/*, www/*'",
-    "build": "mkdir -p dist && rollup index.js | babel -m umd --module-id fotballdataElements -o dist/test.js"
+    "watch:js" : "chokidar 'index.js' -c 'npm run build:js'",
+    "watch:css" : "chokidar 'css/*.css' -c 'npm run build:css'",
+    "build:js": "mkdir -p dist && rollup index.js | babel -m umd --module-id fotballdataElements -o dist/test.js",
+    "build:css": "postcss -u autoprefixer --autoprefixer.browsers 'last 2 versions' -u postcss-import -o dist/test.css css/index.css"
   },
   "repository": {
     "type": "git",
@@ -32,10 +35,13 @@
   },
   "homepage": "https://github.com/askoyfk/fotballdata-elements#readme",
   "devDependencies": {
+    "autoprefixer": "^6.0.3",
     "babel": "^5.8.23",
     "bower": "^1.5.2",
     "browser-sync": "^2.9.3",
     "chokidar-cli": "^1.0.1",
+    "postcss-cli": "^2.1.0",
+    "postcss-import": "^7.0.0",
     "rollup": "^0.16.2"
   }
 }
