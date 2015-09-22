@@ -1,0 +1,5 @@
+body {
+    background: orange;
+    display: flex;
+    transition: transform 3s;
+}

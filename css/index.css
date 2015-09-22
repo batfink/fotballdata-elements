@@ -1,0 +1,9 @@
+@import 'sub.css';
+
+h1 {
+    color: maroon;
+}
+
+:fullscreen a {
+    display: flex
+}
