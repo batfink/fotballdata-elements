@@ -1,4 +1,5 @@
-import test from '../lib/test.js';
+import test from './lib/test.js';
+import { log } from './lib/bondage.js';
 
 var _HTMLElement = function() {};
 _HTMLElement.prototype = HTMLElement.prototype;
@@ -8,10 +9,8 @@ class TestElement extends _HTMLElement {
     createdCallback() {
         this.setAttribute('element-created', '');
         // console.log('foo');
-        // log('created');
-        console.log('test:', test);
+        log('test', test);
         test();
-
     }
 
     attachedCallback() {
