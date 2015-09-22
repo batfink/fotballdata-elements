@@ -9,7 +9,7 @@ class TestElement extends _HTMLElement {
     createdCallback() {
         this.setAttribute('element-created', '');
         // console.log('foo');
-        log('test', test);
+        log('test3', test);
         test();
     }
 
