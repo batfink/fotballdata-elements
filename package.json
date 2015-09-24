@@ -9,7 +9,7 @@
     "start": "npm run watch:js & npm run watch:css & npm run serve",
     "preserve": "npm run build:js & npm run build:css",
     "serve": "browser-sync start --server www --server dist --server bower_components --files 'dist/*, www/*'",
-    "watch:js" : "chokidar 'index.js' -c 'npm run build:js'",
+    "watch:js" : "chokidar 'index.js' 'lib/*.js' 'js/*js' 'elements/*.js' -c 'npm run build:js'",
     "watch:css" : "chokidar 'css/*.css' -c 'npm run build:css'",
     "build:js": "mkdir -p dist && rollup index.js | babel -m umd --module-id fotballdataElements -o dist/test.js",
     "build:css": "postcss -u autoprefixer --autoprefixer.browsers 'last 2 versions' -u postcss-import -o dist/test.css css/index.css"
